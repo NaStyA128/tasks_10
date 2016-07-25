@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Battle</title>
+        <link href="{% static 'battle/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+        <script src="{% static 'battle/js/jquery-1.9.1.min.js' %}"></script>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Start">
+    </body>
+    <script type="text/javascript">
+        var div = document.createElement('br');
+        $("form label").append(div);
+    </script>
+</html>
